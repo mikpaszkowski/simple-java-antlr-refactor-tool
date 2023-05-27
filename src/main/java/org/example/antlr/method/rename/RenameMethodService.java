@@ -7,11 +7,14 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
+import org.example.antlr.TransformationService;
+import org.example.antlr.exceptions.ClassElementMissingException;
 
-public class RenameMethodService {
+public class RenameMethodService implements TransformationService<RenameMethodDTO> {
 
-    public static String renameMethod(RenameMethodDTO dto, String sourceCode) {
-        Java8Lexer java8Lexer = new Java8Lexer(CharStreams.fromString(sourceCode));
+    @Override
+    public String transform(RenameMethodDTO dto, String content) {
+        Java8Lexer java8Lexer = new Java8Lexer(CharStreams.fromString(content));
         CommonTokenStream tokens = new CommonTokenStream(java8Lexer);
         Java8Parser java8Parser = new Java8Parser(tokens);
         ParseTree tree = java8Parser.compilationUnit();
@@ -19,6 +22,12 @@ public class RenameMethodService {
         RenameMethodListener methodNameListener = new RenameMethodListener(rewriter, dto);
         //when
         ParseTreeWalker.DEFAULT.walk(methodNameListener, tree);
+
+        if(!methodNameListener.isSourceClassExist()) {
+            throw new ClassElementMissingException("No source class: " + dto.getSourceClassName() + " present.");
+        } else if (!methodNameListener.isMethodExist()){
+            throw new ClassElementMissingException("No method: " + dto.getMethodName() + " found.");
+        }
 
         return methodNameListener.getRewrittenText();
     }

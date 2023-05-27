@@ -18,7 +18,6 @@ public class FileReader {
                 throw new FileFormatException("Wrong extension of input file. Should be *.java");
             }
             JavaFileCompilerValidator.checkFileCompilability(filePath.toString());
-            System.out.println("File is compilable.");
             return fileContent;
         } catch (IOException e) {
             throw new RuntimeException("Error occurred while accessing file: " + fileName);
@@ -41,5 +40,10 @@ public class FileReader {
         writer.write(content);
 
         writer.close();
+    }
+
+    public static void removeFile(String fileName) throws IOException {
+        Path filePath = Path.of(fileName);
+        Files.delete(filePath);
     }
 }

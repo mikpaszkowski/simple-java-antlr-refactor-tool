@@ -16,6 +16,8 @@ class RenameMethodListener extends Java8ParserBaseListener implements ParseTreeL
     private final TokenStreamRewriter rewriter;
     private final RenameMethodDTO refactorDTO;
     private boolean isParserInSourceClass;
+    private boolean isSourceClassExist;
+    private boolean isMethodExist;
     private final Map<String, String> classNameToInvokedMethodNameMap;
 
     public RenameMethodListener(TokenStreamRewriter rewriter, RenameMethodDTO dto) {
@@ -30,12 +32,18 @@ class RenameMethodListener extends Java8ParserBaseListener implements ParseTreeL
         super.enterClassDeclaration(ctx);
         var classNameToken = ctx.normalClassDeclaration().Identifier().getSymbol();
         this.isParserInSourceClass = Objects.equals(classNameToken.getText(), this.refactorDTO.getSourceClassName());
+        if(this.isParserInSourceClass) {
+            this.isSourceClassExist = true;
+        }
     }
 
     @Override
     public void enterMethodDeclaration(Java8Parser.MethodDeclarationContext ctx) {
         super.enterMethodDeclaration(ctx);
         var methodDeclarationToken = ctx.methodHeader().methodDeclarator().Identifier().getSymbol();
+        if(Objects.equals(methodDeclarationToken.getText(), this.refactorDTO.getMethodName())){
+            this.isMethodExist = true;
+        }
         if (this.isParserInSourceClass) {
             changeNameOfToken(methodDeclarationToken);
         }
@@ -92,5 +100,13 @@ class RenameMethodListener extends Java8ParserBaseListener implements ParseTreeL
 
     public String getRewrittenText() {
         return rewriter.getText();
+    }
+
+    public boolean isSourceClassExist() {
+        return isSourceClassExist;
+    }
+
+    public boolean isMethodExist() {
+        return isMethodExist;
     }
 }

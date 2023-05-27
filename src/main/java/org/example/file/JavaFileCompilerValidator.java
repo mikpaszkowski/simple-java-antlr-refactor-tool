@@ -24,5 +24,6 @@ public class JavaFileCompilerValidator {
         } catch (IOException e) {
             throw new RuntimeException("Error occurred while accessing file: " + filePath);
         }
+        System.out.println("File is compilable.");
     }
 }

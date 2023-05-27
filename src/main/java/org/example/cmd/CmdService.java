@@ -2,14 +2,15 @@ package org.example.cmd;
 
 import org.example.antlr.clazz.RenameClassDTO;
 import org.example.antlr.clazz.RenameClassService;
-import org.example.antlr.method.move.MethodMoveDTO;
-import org.example.antlr.method.move.MethodMoveService;
+import org.example.antlr.method.move.MoveMethodDTO;
+import org.example.antlr.method.move.MoveMethodService;
 import org.example.antlr.method.rename.RenameMethodDTO;
 import org.example.antlr.method.rename.RenameMethodService;
 import org.example.file.FileReader;
+import org.example.file.JavaFileCompilerValidator;
 
 import java.io.IOException;
-import java.util.List;
+import java.nio.file.Path;
 import java.util.Objects;
 
 import static org.example.cmd.TransformType.*;
@@ -82,7 +83,8 @@ public class CmdService {
 
             if (transformType == MOVE_METHOD) {
                 // Execute the method move
-                outputContent = MethodMoveService.moveMethod(MethodMoveDTO.builder()
+                MoveMethodService moveMethodService = new MoveMethodService();
+                outputContent = moveMethodService.transform(MoveMethodDTO.builder()
                         .sourceClassName(sourceClass)
                         .targetClassName(targetClass)
                         .methodName(methodName)
@@ -91,7 +93,8 @@ public class CmdService {
                 // Print the result
                 System.out.println(outputContent);
             } else if (transformType == CHANGE_METHOD_NAME) {
-                outputContent = RenameMethodService.renameMethod(RenameMethodDTO.builder()
+                RenameMethodService renameMethodService = new RenameMethodService();
+                outputContent = renameMethodService.transform(RenameMethodDTO.builder()
                         .sourceClassName(sourceClass)
                         .newMethodName(newMethodName)
                         .methodName(methodName)
@@ -99,7 +102,8 @@ public class CmdService {
 
                 System.out.println(outputContent);
             } else if (transformType == CHANGE_CLASS_NAME) {
-                outputContent = RenameClassService.renameClass(RenameClassDTO.builder()
+                RenameClassService renameClassService = new RenameClassService();
+                outputContent = renameClassService.transform(RenameClassDTO.builder()
                         .className(sourceClass)
                         .newClassName(newClassName)
                         .build(), inputContent);
@@ -110,14 +114,18 @@ public class CmdService {
                 System.out.println("File has been refactored successfully!");
                 FileReader.saveFile(outputContent, fileName);
                 System.out.println("Refactored content has been saved under the file with the same name with prefix: \"*_refactored.java\"");
+                System.out.println("Verifying whether file is compilable ...");
+
+                try {
+                    JavaFileCompilerValidator.checkFileCompilability(Path.of(fileName).toString());
+                } catch (RuntimeException ex) {
+                    System.out.println(ex.getMessage());
+                    FileReader.removeFile(fileName);
+                }
             }
 
         } catch (RuntimeException | IOException ex) {
             System.out.println(ex.getMessage());
         }
-    }
-
-    public static void main(String[] args) {
-        handleCmdArgs(new String[]{"--transformType=\"changeMethodName\"","--fileName=\"TestRefactorMethod1.java\""});
     }
 }

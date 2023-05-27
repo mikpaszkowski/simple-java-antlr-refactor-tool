@@ -4,16 +4,22 @@ import lombok.Getter;
 import main.antlr4.org.example.antlr.Java8Parser;
 import main.antlr4.org.example.antlr.Java8ParserBaseListener;
 import org.antlr.v4.runtime.TokenStreamRewriter;
+import org.example.antlr.exceptions.MethodAlreadyDefineInTargetClassException;
+
+import java.util.Objects;
+
 @Getter
-class MethodMoveListener extends Java8ParserBaseListener {
+class MoveMethodListener extends Java8ParserBaseListener {
     private final TokenStreamRewriter rewriter;
     private boolean isInSourceClass;
     private boolean isInTargetClass;
     private boolean isMethodFound;
-    private final MethodMoveDTO dto;
+    private boolean isTargetClassExist;
+    private boolean isSourceClassExist;
+    private final MoveMethodDTO dto;
     private Java8Parser.MethodDeclarationContext methodBody;
 
-    public MethodMoveListener(TokenStreamRewriter rewriter, MethodMoveDTO dto) {
+    public MoveMethodListener(TokenStreamRewriter rewriter, MoveMethodDTO dto) {
         this.rewriter = rewriter;
         this.dto = dto;
         this.isInSourceClass = false;
@@ -26,16 +32,21 @@ class MethodMoveListener extends Java8ParserBaseListener {
         super.enterClassDeclaration(ctx);
         String className = ctx.normalClassDeclaration().Identifier().getText();
         if (className.equals(dto.getSourceClassName())) {
+            this.isSourceClassExist = true;
             isInSourceClass = true;
         } else if (className.equals(dto.getTargetClassName())) {
+            this.isTargetClassExist = true;
             isInTargetClass = true;
         }
     }
 
     @Override
     public void enterMethodDeclaration(Java8Parser.MethodDeclarationContext ctx) {
+        String methodName = ctx.methodHeader().methodDeclarator().Identifier().getText();
+        if(isInTargetClass && Objects.equals(methodName, this.dto.getMethodName())) {
+            throw new MethodAlreadyDefineInTargetClassException("Method of name: " + dto.getMethodName() + " is already defined in target class: " + dto.getTargetClassName());
+        }
         if (isInSourceClass && !isMethodFound) {
-            String methodName = ctx.methodHeader().methodDeclarator().Identifier().getText();
             if (methodName.equals(this.dto.getMethodName())) {
                 isMethodFound = true;
                 // Save the method declaration context
@@ -52,6 +63,8 @@ class MethodMoveListener extends Java8ParserBaseListener {
             rewriter.insertAfter(ctx.stop.getTokenIndex() - 1, getFormattedMethodBody());
             methodBody = null;
         }
+        this.isInSourceClass = false;
+        this.isInTargetClass = false;
     }
 
     public String getRewrittenText() {
@@ -67,15 +80,15 @@ class MethodMoveListener extends Java8ParserBaseListener {
     }
 
     public boolean isTargetClassMissing() {
-        return isInSourceClass && !isInTargetClass;
+        return isSourceClassExist && !isTargetClassExist;
     }
 
     public boolean isSourceClassMissing() {
-        return !isInSourceClass && isInTargetClass;
+        return !isSourceClassExist && isTargetClassExist;
     }
 
     public boolean isBothClassesMissing() {
-        return !isInSourceClass && !isInTargetClass;
+        return !isSourceClassExist && !isTargetClassExist;
     }
 
     public boolean isMethodMissing() {

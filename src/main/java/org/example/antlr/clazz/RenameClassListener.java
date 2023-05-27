@@ -14,9 +14,9 @@ import java.util.Optional;
 class RenameClassListener extends Java8ParserBaseListener implements ParseTreeListener {
 
     private final TokenStreamRewriter rewriter;
-
     private final String className;
     private final String newClassName;
+    private boolean isSourceClassExist;
 
     public RenameClassListener(TokenStreamRewriter rewriter, RenameClassDTO dto) {
         this.rewriter = rewriter;
@@ -30,6 +30,7 @@ class RenameClassListener extends Java8ParserBaseListener implements ParseTreeLi
         TerminalNode node = ctx.normalClassDeclaration().Identifier();
         //get the current class name
         if (Objects.equals(className, node.getText())) {
+            this.isSourceClassExist = true;
             //replace the class name in the declaration and all references to it
             Token classNameToken = node.getSymbol();
             this.rewriter.replace(classNameToken, newClassName);
@@ -190,5 +191,9 @@ class RenameClassListener extends Java8ParserBaseListener implements ParseTreeLi
 
     public String getRewrittenText() {
         return rewriter.getText();
+    }
+
+    public boolean isSourceClassExist() {
+        return isSourceClassExist;
     }
 }

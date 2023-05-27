@@ -5,10 +5,8 @@ import main.antlr4.org.example.antlr.Java8Parser;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.example.TestClassUtils;
-import org.example.antlr.clazz.RenameClassDTO;
-import org.example.antlr.clazz.RenameClassListener;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
+import org.example.TestClassUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -17,7 +15,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.io.IOException;
 import java.util.stream.Stream;
 
-public class RenameClassListenerTest {
+class RenameClassListenerTest {
 
     private static Stream<Arguments> refactorClassNameTestProvider() {
         return Stream.of(

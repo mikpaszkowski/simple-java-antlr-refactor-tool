@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class MethodMoveDTO {
+public class MoveMethodDTO {
 
     private String methodName;
     private String targetClassName;

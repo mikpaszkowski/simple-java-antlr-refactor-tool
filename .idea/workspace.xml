@@ -4,69 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/antlr4/org/example/antlr/Java8Lexer.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/antlr4/org/example/antlr/Java8Parser.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/exceptions/ClassElementMissingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/exceptions/FileFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/exceptions/ThrowingErrorListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CommandArgument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/TransformType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/file/FileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/file/JavaFileCompilerValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TestClassUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/clazz/RenameClassListenerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MethodMoveListenerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/rename/RenameMethodListenerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/file/JavaFileCompilerValidatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorClass1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorClass2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorClass3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorClass4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorClass5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMethod1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMethod2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMethod3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMethod4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorClass1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorClass2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorClass3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorClass4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorClass5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMethod1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMethod2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMethod3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMethod4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/CompilableClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/NonCompilableClass.java" afterDir="false" />
+    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="additional tests, covering some edge cases">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/TransformationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/exceptions/MethodAlreadyDefineInTargetClassException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/clazz/RenameClassServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MoveMethodServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/rename/RenameMethodServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/invalid/SampleClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/file/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/file/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/file/JavaFileCompilerValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/file/JavaFileCompilerValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/antlr/clazz/RenameClassListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/clazz/RenameClassListenerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MethodMoveListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MoveMethodListenerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +35,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,7 +69,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mikolajpaszkowski/Documents/projects/java-class-refactor-tool/target&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mikolajpaszkowski/Documents/projects/java-class-refactor-tool/src/test/resources/test-classes/before&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -125,11 +84,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/test-classes/before" />
+      <recent name="$PROJECT_DIR$/src/test/resources/test-classes/invalid" />
       <recent name="$PROJECT_DIR$/target" />
       <recent name="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes" />
-      <recent name="$PROJECT_DIR$/src/test/resources/test-classes/before" />
       <recent name="$PROJECT_DIR$/src/test/resources/test-classes/after" />
-      <recent name="$PROJECT_DIR$/src/test/resources/test-methods/before" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/antlr4/org/example/antlr" />
@@ -149,51 +108,71 @@
       <recent name="org.example" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.antlr.method.rename" />
+      <recent name="org.example.antlr.clazz" />
+      <recent name="org.example.antlr.method.move" />
       <recent name="org.example.file" />
       <recent name="org.example.antlr" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.java in java-class-refactor-tool">
-    <configuration name="CmdService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.cmd.CmdService" />
+    <configuration name="MoveMethodListenerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.cmd.*" />
+          <option name="PATTERN" value="org.example.antlr.method.move.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavaFileCompilerValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-class-refactor-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.file.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.file" />
-      <option name="MAIN_CLASS_NAME" value="org.example.file.JavaFileCompilerValidatorTest" />
+      <option name="PACKAGE_NAME" value="org.example.antlr.method.move" />
+      <option name="MAIN_CLASS_NAME" value="org.example.antlr.method.move.MoveMethodListenerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="antlr in java-class-refactor-tool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MoveMethodListenerTest.shouldThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/org/antlr/antlr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.antlr.method.move.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.antlr.method.move" />
+      <option name="MAIN_CLASS_NAME" value="org.example.antlr.method.move.MoveMethodListenerTest" />
+      <option name="METHOD_NAME" value="shouldThrowException(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="example in java-class-refactor-tool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MoveMethodServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/org/example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.antlr.method.move.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.antlr.method.move" />
+      <option name="MAIN_CLASS_NAME" value="org.example.antlr.method.move.MoveMethodServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenameMethodServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-class-refactor-tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.antlr.method.rename.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.antlr.method.rename" />
+      <option name="MAIN_CLASS_NAME" value="org.example.antlr.method.rename.RenameMethodServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,10 +188,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.java in java-class-refactor-tool" />
-        <item itemvalue="JUnit.example in java-class-refactor-tool" />
-        <item itemvalue="Application.CmdService" />
-        <item itemvalue="JUnit.JavaFileCompilerValidatorTest" />
-        <item itemvalue="JUnit.antlr in java-class-refactor-tool" />
+        <item itemvalue="JUnit.MoveMethodServiceTest" />
+        <item itemvalue="JUnit.MoveMethodListenerTest" />
+        <item itemvalue="JUnit.MoveMethodListenerTest.shouldThrowException" />
+        <item itemvalue="JUnit.RenameMethodServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -229,12 +208,16 @@
       <workItem from="1683665108554" duration="587000" />
       <workItem from="1683665739684" duration="36485000" />
       <workItem from="1684179537829" duration="20463000" />
-      <workItem from="1684788612434" duration="37260000" />
+      <workItem from="1684788612434" duration="47341000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="additional tests, covering some edge cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="additional tests, covering some edge cases" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -370,59 +353,72 @@
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
           <line>41</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
           <line>23</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
           <line>49</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveService.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodService.java</url>
           <line>39</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
           <line>26</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
           <line>28</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
           <line>75</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java</url>
-          <line>51</line>
+          <line>52</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MoveMethodServiceTest.java</url>
+          <line>29</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="103" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -430,6 +426,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/java_class_refactor_tool$MethodMoveListenerTest.ic" NAME="MethodMoveListenerTest Coverage Results" MODIFIED="1684875956672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.antlr.antlr.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_class_refactor_tool$MoveMethodServiceTest.ic" NAME="MoveMethodServiceTest Coverage Results" MODIFIED="1685204020892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.antlr.method.move.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java_class_refactor_tool$RefactorMethodNameListenerTest.ic" NAME="RefactorMethodNameListenerTest Coverage Results" MODIFIED="1684270972134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.antlr.antlr.*</FILTER>
