@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.Objects;
 
 public class FileReader {
@@ -39,6 +40,20 @@ public class FileReader {
         String currentDirectory = System.getProperty("user.dir");
         String directoryPath = currentDirectory + File.separator + "transformation_result";
 
+
+        if(Files.exists(Path.of(directoryPath))){
+            Files
+                    .walk(Path.of(directoryPath)) // Traverse the file tree in depth-first order
+                    .sorted(Comparator.reverseOrder())
+                    .forEach(path -> {
+                        try {
+                            System.out.println("Deleting: " + path);
+                            Files.delete(path);  //delete each file or directory
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    });
+        }
         File directory = new File(directoryPath);
         if (directory.mkdirs()) {
             System.out.println("Directory created successfully.");
