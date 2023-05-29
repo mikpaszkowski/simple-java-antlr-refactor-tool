@@ -5,26 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="additional tests, covering some edge cases">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/TransformationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/exceptions/MethodAlreadyDefineInTargetClassException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/clazz/RenameClassServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MoveMethodServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/rename/RenameMethodServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/invalid/SampleClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/clazz/RenameClassService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MethodMoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/move/MoveMethodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/antlr/method/rename/RenameMethodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/file/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/file/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/file/JavaFileCompilerValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/file/JavaFileCompilerValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/antlr/clazz/RenameClassListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/clazz/RenameClassListenerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MethodMoveListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/antlr/method/move/MoveMethodListenerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/AnotherSampleClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/CompilableClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/SampleClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/invalid/SampleClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/invalid/SampleClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,8 +200,16 @@
       <workItem from="1683665108554" duration="587000" />
       <workItem from="1683665739684" duration="36485000" />
       <workItem from="1684179537829" duration="20463000" />
-      <workItem from="1684788612434" duration="47341000" />
+      <workItem from="1684788612434" duration="48663000" />
     </task>
+    <task id="LOCAL-00001" summary="additional tests, covering some edge cases">
+      <created>1685209768555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685209768555</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,7 +2,7 @@ public class SampleClass {
 
 }
 
-public class AnotherClass {
+class AnotherClass {
 
 private String methodName() {return"text";}
 }

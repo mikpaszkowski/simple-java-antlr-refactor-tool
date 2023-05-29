@@ -9,7 +9,7 @@ public class SampleClass {
 
 }
 
-public class AnotherClass {
+class AnotherClass {
 
     private String field1;
     private String field2;

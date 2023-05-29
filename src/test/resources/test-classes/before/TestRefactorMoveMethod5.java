@@ -9,7 +9,7 @@ public class SampleClass {
 public String methodName() {return "text";}
 }
 
-public class AnotherClass {
+class AnotherClass {
 
     private String field1;
     private String field2;
