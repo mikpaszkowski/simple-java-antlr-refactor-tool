@@ -7,10 +7,8 @@ import org.example.antlr.method.move.MoveMethodService;
 import org.example.antlr.method.rename.RenameMethodDTO;
 import org.example.antlr.method.rename.RenameMethodService;
 import org.example.file.FileReader;
-import org.example.file.JavaFileCompilerValidator;
 
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.Objects;
 
 import static org.example.cmd.TransformType.*;
@@ -19,6 +17,7 @@ public class CmdService {
 
     public static void handleCmdArgs(String[] args) {
         TransformType transformType = null;
+        String cliMode = null;
         String fileName = null;
         String sourceClass = null;
         String targetClass = null;
@@ -28,7 +27,9 @@ public class CmdService {
 
         // Parse named arguments
         for (String arg : args) {
-            if (arg.startsWith(CommandArgument.TRANSFORM_TYPE.getValue())) {
+            if (arg.startsWith(CommandArgument.CLI_INTERACTION_MODE.getValue())) {
+                cliMode = "CLI";
+            } else if (arg.startsWith(CommandArgument.TRANSFORM_TYPE.getValue())) {
                 transformType = TransformType.transformTypeOfValue(arg.substring(16));
             } else if (arg.startsWith(CommandArgument.FILE_NAME.getValue())) {
                 fileName = arg.substring(11);
@@ -44,13 +45,17 @@ public class CmdService {
                 newMethodName = arg.substring(16);
             }
         }
+        if(Objects.nonNull(cliMode)) {
+            var cliService = new CLIService();
+            cliService.run();
+        }
 
         if (fileName == null) {
             System.out.println("Missing input file. Provide --fileName");
             return;
         }
 
-        switch (transformType) {
+        switch (Objects.requireNonNull(transformType)) {
             case CHANGE_CLASS_NAME:
                 if (sourceClass == null || newClassName == null) {
                     System.out.println("Missing arguments for transformation of type: classNameChange.");
@@ -110,19 +115,7 @@ public class CmdService {
 
                 System.out.println(outputContent);
             }
-            if (!Objects.isNull(outputContent)) {
-                System.out.println("File has been refactored successfully!");
-                FileReader.saveFile(outputContent, fileName);
-                System.out.println("Refactored content has been saved under the file with the same name with prefix: \"*_refactored.java\"");
-                System.out.println("Verifying whether file is compilable ...");
-
-                try {
-                    JavaFileCompilerValidator.checkFileCompilability(Path.of(fileName).toString());
-                } catch (RuntimeException ex) {
-                    System.out.println(ex.getMessage());
-                    FileReader.removeFile(fileName);
-                }
-            }
+            FileReader.verifyRefactoredFile(fileName, outputContent);
 
         } catch (RuntimeException | IOException ex) {
             System.out.println(ex.getMessage());

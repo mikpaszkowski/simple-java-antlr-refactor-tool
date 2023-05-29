@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="additional tests, covering some edge cases">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/after/TestRefactorMoveMethod5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/before/TestRefactorMoveMethod6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/AnotherSampleClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/CompilableClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/compilability-check-classes/SampleClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-classes/invalid/SampleClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-classes/invalid/SampleClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CLIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CommandArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CommandArgument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/file/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/file/FileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +100,15 @@
       <recent name="org.example.antlr" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in java-class-refactor-tool">
+  <component name="RunManager" selected="JUnit.All in java-class-refactor-tool">
+    <configuration name="All in java-class-refactor-tool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-class-refactor-tool" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MoveMethodListenerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
       <extension name="coverage">
@@ -154,21 +155,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RenameMethodServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-class-refactor-tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.antlr.method.rename.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.antlr.method.rename" />
-      <option name="MAIN_CLASS_NAME" value="org.example.antlr.method.rename.RenameMethodServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="java in java-class-refactor-tool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
       <option name="TEST_OBJECT" value="directory" />
@@ -179,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in java-class-refactor-tool" />
         <item itemvalue="JUnit.java in java-class-refactor-tool" />
         <item itemvalue="JUnit.MoveMethodServiceTest" />
         <item itemvalue="JUnit.MoveMethodListenerTest" />
         <item itemvalue="JUnit.MoveMethodListenerTest.shouldThrowException" />
-        <item itemvalue="JUnit.RenameMethodServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +187,7 @@
       <workItem from="1683665739684" duration="36485000" />
       <workItem from="1684179537829" duration="20463000" />
       <workItem from="1684788612434" duration="48663000" />
+      <workItem from="1685392205070" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="additional tests, covering some edge cases">
       <created>1685209768555</created>
@@ -389,17 +376,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java</url>
-          <line>52</line>
+          <line>57</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java</url>
-          <line>31</line>
+          <line>32</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java</url>
-          <line>30</line>
+          <line>29</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
