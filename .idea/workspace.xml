@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="testing CmdService, last changes">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" afterDir="false" />
-    </list>
+    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="implementing help command and addition of README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +180,7 @@
       <workItem from="1683665739684" duration="36485000" />
       <workItem from="1684179537829" duration="20463000" />
       <workItem from="1684788612434" duration="48663000" />
-      <workItem from="1685392205070" duration="7873000" />
+      <workItem from="1685392205070" duration="8187000" />
     </task>
     <task id="LOCAL-00001" summary="additional tests, covering some edge cases">
       <created>1685209768555</created>
@@ -214,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685480062639</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="implementing help command and addition of README.md">
+      <created>1685481251103</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685481251103</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +228,8 @@
     <MESSAGE value="implementing CLI with minor improvements" />
     <MESSAGE value="removing output directory before each new transformation" />
     <MESSAGE value="testing CmdService, last changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing CmdService, last changes" />
+    <MESSAGE value="implementing help command and addition of README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing help command and addition of README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

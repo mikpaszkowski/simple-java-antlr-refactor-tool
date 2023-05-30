@@ -31,6 +31,7 @@ To run the project, use the following command:
 
 #### Options
 
+- `--help`: Check the details of how to use the application through running a JAR file.
 - `--CLI`: Run the application in CLI (Command-Line Interface) mode.
 - `--transformType="<type>"`: Specify the transformation type. Available types: `renameMethod`, `renameClass`, `moveMethod`.
 - `--fileName="<path>"`: Specify the input Java file path.

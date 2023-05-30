@@ -132,6 +132,7 @@ public class CmdService {
         sb.append("Project Name - Code Transformation Tool\n\n");
         sb.append("Usage: java -jar project-name.jar [options]\n\n");
         sb.append("Options:\n");
+        sb.append("  --help                     Check the details of how to use the application through running a JAR file.\n");
         sb.append("  --cliMode                  Run the application in CLI (Command-Line Interface) mode.\n");
         sb.append("  --transformType <type>     Specify the transformation type. Available types: renameMethod, renameClass, moveMethod.\n");
         sb.append("  --fileName <path>          Specify the input Java file path.\n");
