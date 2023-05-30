@@ -23,4 +23,10 @@ public class TestClassUtils {
         String absolutePath = file.getAbsolutePath();
         return CharStreams.fromStream(new FileInputStream(absolutePath));
     }
+
+    public static String getContentOfFileOnPath(String path) throws IOException {
+        File file = new File(path);
+        String absolutePath = file.getAbsolutePath();
+        return CharStreams.fromStream(new FileInputStream(absolutePath)).toString();
+    }
 }

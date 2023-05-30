@@ -115,7 +115,8 @@ public class CmdService {
 
                 System.out.println(outputContent);
             }
-            FileReader.verifyRefactoredFile(fileName, outputContent);
+            var newFileName = transformType == CHANGE_CLASS_NAME ? fileName.replace(sourceClass, newClassName) : fileName;
+            FileReader.verifyRefactoredFile(newFileName, outputContent);
 
         } catch (RuntimeException | IOException ex) {
             System.out.println(ex.getMessage());
