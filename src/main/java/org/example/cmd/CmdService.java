@@ -24,10 +24,14 @@ public class CmdService {
         String newMethodName = null;
         String methodName = null;
         String newClassName = null;
+        String helpCommand = null;
 
         // Parse named arguments
         for (String arg : args) {
-            if (arg.startsWith(CommandArgument.CLI_INTERACTION_MODE.getValue())) {
+            if (arg.startsWith("--help")) {
+                System.out.println(generateHelpMessage());
+                return;
+            } else if (arg.startsWith(CommandArgument.CLI_INTERACTION_MODE.getValue())) {
                 cliMode = "CLI";
             } else if (arg.startsWith(CommandArgument.TRANSFORM_TYPE.getValue())) {
                 transformType = TransformType.transformTypeOfValue(arg.substring(16));
@@ -45,7 +49,7 @@ public class CmdService {
                 newMethodName = arg.substring(16);
             }
         }
-        if(Objects.nonNull(cliMode)) {
+        if (Objects.nonNull(cliMode)) {
             var cliService = new CLIService();
             cliService.run();
         }
@@ -121,5 +125,26 @@ public class CmdService {
         } catch (RuntimeException | IOException ex) {
             System.out.println(ex.getMessage());
         }
+    }
+
+    private static String generateHelpMessage() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Project Name - Code Transformation Tool\n\n");
+        sb.append("Usage: java -jar project-name.jar [options]\n\n");
+        sb.append("Options:\n");
+        sb.append("  --cliMode                  Run the application in CLI (Command-Line Interface) mode.\n");
+        sb.append("  --transformType <type>     Specify the transformation type. Available types: renameMethod, renameClass, moveMethod.\n");
+        sb.append("  --fileName <path>          Specify the input Java file path.\n");
+        sb.append("  --sourceClass <name>       Specify the source class name.\n");
+        sb.append("  --targetClass <name>       Specify the target class name (for moveMethod transformation).\n");
+        sb.append("  --methodName <name>        Specify the method name.\n");
+        sb.append("  --newMethodName <name>     Specify the new method name (for renameMethod transformation).\n");
+        sb.append("  --newClassName <name>      Specify the new class name (for renameClass transformation).\n\n");
+        sb.append("Examples:\n");
+        sb.append("  java -jar project-name.jar --cliMode --transformType renameMethod --fileName path/to/file.java --sourceClass ClassName --methodName methodName --newMethodName newMethodName\n");
+        sb.append("  java -jar project-name.jar --transformType moveMethod --fileName path/to/file.java --sourceClass SourceClass --targetClass TargetClass --methodName methodName\n\n");
+        sb.append("For more information, please refer to the project's README.md file.\n");
+
+        return sb.toString();
     }
 }

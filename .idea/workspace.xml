@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="removing output directory before each new transformation">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/cmd/CmdServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/cmd/SampleClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/cmd/TestClass1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/cmd/TestClass2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/cmd/TestClass3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-classes/cmd/TestClass4.java" afterDir="false" />
+    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="testing CmdService, last changes">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestClassUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestClassUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +98,7 @@
       <recent name="org.example.file" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in java-class-refactor-tool">
+  <component name="RunManager" selected="JUnit.CmdServiceTest">
     <configuration name="All in java-class-refactor-tool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
       <option name="PACKAGE_NAME" value="" />
@@ -168,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in java-class-refactor-tool" />
         <item itemvalue="JUnit.CmdServiceTest" />
+        <item itemvalue="JUnit.All in java-class-refactor-tool" />
         <item itemvalue="JUnit.java in java-class-refactor-tool" />
         <item itemvalue="JUnit.MoveMethodServiceTest" />
         <item itemvalue="JUnit.MoveMethodListenerTest" />
@@ -190,7 +184,7 @@
       <workItem from="1683665739684" duration="36485000" />
       <workItem from="1684179537829" duration="20463000" />
       <workItem from="1684788612434" duration="48663000" />
-      <workItem from="1685392205070" duration="6666000" />
+      <workItem from="1685392205070" duration="7873000" />
     </task>
     <task id="LOCAL-00001" summary="additional tests, covering some edge cases">
       <created>1685209768555</created>
@@ -213,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685393405125</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="testing CmdService, last changes">
+      <created>1685480062639</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685480062639</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +224,8 @@
     <MESSAGE value="additional tests, covering some edge cases" />
     <MESSAGE value="implementing CLI with minor improvements" />
     <MESSAGE value="removing output directory before each new transformation" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing output directory before each new transformation" />
+    <MESSAGE value="testing CmdService, last changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing CmdService, last changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -413,7 +415,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/cmd/CmdServiceTest.java</url>
-          <line>104</line>
+          <line>93</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
