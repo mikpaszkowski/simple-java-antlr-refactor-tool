@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="implementing help command and addition of README.md" />
+    <list default="true" id="ce562f4f-c9b1-4add-8229-4d2b0d6fee33" name="Changes" comment="edge case covered, cleaning">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/GUIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CLIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CLIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CmdService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cmd/CommandArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/cmd/CommandArgument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/cmd/CmdServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/cmd/CLIServiceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,27 +49,27 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/mikolajpaszkowski/Documents/projects/simple-java-antlr-refactor-tool/src/test/resources/test-classes/cmd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mikolajpaszkowski/Documents/projects/simple-java-antlr-refactor-tool/src/test/resources/test-classes/cmd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/test-classes/cmd" />
@@ -94,7 +103,7 @@
       <recent name="org.example.file" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CmdServiceTest">
+  <component name="RunManager" selected="JUnit.RenameClassServiceTest">
     <configuration name="All in java-class-refactor-tool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
       <option name="PACKAGE_NAME" value="" />
@@ -103,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CmdServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CLIServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
       <extension name="coverage">
         <pattern>
@@ -112,7 +121,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.cmd" />
-      <option name="MAIN_CLASS_NAME" value="org.example.cmd.CmdServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.cmd.CLIServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,36 +142,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MoveMethodServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RenameClassServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.antlr.method.move.*" />
+          <option name="PATTERN" value="org.example.antlr.clazz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.antlr.method.move" />
-      <option name="MAIN_CLASS_NAME" value="org.example.antlr.method.move.MoveMethodServiceTest" />
+      <option name="PACKAGE_NAME" value="org.example.antlr.clazz" />
+      <option name="MAIN_CLASS_NAME" value="org.example.antlr.clazz.RenameClassServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in java-class-refactor-tool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RenameMethodListenerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-class-refactor-tool" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.antlr.method.rename.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.antlr.method.rename" />
+      <option name="MAIN_CLASS_NAME" value="org.example.antlr.method.rename.RenameMethodListenerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CmdServiceTest" />
+        <item itemvalue="JUnit.RenameClassServiceTest" />
         <item itemvalue="JUnit.All in java-class-refactor-tool" />
-        <item itemvalue="JUnit.java in java-class-refactor-tool" />
-        <item itemvalue="JUnit.MoveMethodServiceTest" />
         <item itemvalue="JUnit.MoveMethodListenerTest" />
+        <item itemvalue="JUnit.RenameMethodListenerTest" />
+        <item itemvalue="JUnit.CLIServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +196,8 @@
       <workItem from="1683665739684" duration="36485000" />
       <workItem from="1684179537829" duration="20463000" />
       <workItem from="1684788612434" duration="48663000" />
-      <workItem from="1685392205070" duration="8187000" />
+      <workItem from="1685392205070" duration="13224000" />
+      <workItem from="1685997330250" duration="14250000" />
     </task>
     <task id="LOCAL-00001" summary="additional tests, covering some edge cases">
       <created>1685209768555</created>
@@ -217,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685481251103</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="minor fixes">
+      <created>1685481626130</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685481626130</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +253,9 @@
     <MESSAGE value="removing output directory before each new transformation" />
     <MESSAGE value="testing CmdService, last changes" />
     <MESSAGE value="implementing help command and addition of README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing help command and addition of README.md" />
+    <MESSAGE value="minor fixes" />
+    <MESSAGE value="edge case covered, cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="edge case covered, cleaning" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -418,7 +444,7 @@
           <option name="timeStamp" value="103" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/cmd/CmdServiceTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/cmd/CLIServiceTest.java</url>
           <line>93</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -426,6 +452,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/TestClassUtils.java</url>
           <line>28</line>
           <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/cmd/CLIService.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

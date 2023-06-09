@@ -32,7 +32,7 @@ To run the project, use the following command:
 #### Options
 
 - `--help`: Check the details of how to use the application through running a JAR file.
-- `--CLI`: Run the application in CLI (Command-Line Interface) mode.
+- `--GUI`: Run the application in GUI (Graphical User Interface) mode.
 - `--transformType="<type>"`: Specify the transformation type. Available types: `renameMethod`, `renameClass`, `moveMethod`.
 - `--fileName="<path>"`: Specify the input Java file path.
 - `--sourceClass="<name>"`: Specify the source class name.
@@ -48,7 +48,7 @@ java -jar <target_jar_name>-jar-with-dependencies.jar --transformType=renameMeth
 ```
 
 ```agsl
-java -jar <target_jar_name>-jar-with-dependencies.jar --CLI
+java -jar <target_jar_name>-jar-with-dependencies.jar --GUI
 ```
 
 

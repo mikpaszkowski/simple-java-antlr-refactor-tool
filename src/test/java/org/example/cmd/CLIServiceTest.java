@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static org.example.TestClassUtils.getCharStreamFromClassFile;
 import static org.example.TestClassUtils.getContentOfFileOnPath;
 
-class CmdServiceTest {
+class CLIServiceTest {
 
     @BeforeEach
     void beforeEach() throws IOException {
@@ -90,7 +90,7 @@ class CmdServiceTest {
     @MethodSource("javaFileTransformationsProvider")
     void shouldPerformGivenTransformationsCorrectly(String[] args, String fileName, String action, String outputClassPath) throws IOException {
         //given
-        CmdService.handleCmdArgs(args);
+        CLIService.handleCmdArgs(args);
         Assertions.assertEquals(getCharStreamFromClassFile("cmd", fileName).toString(), getContentOfFileOnPath(outputClassPath));
     }
 }

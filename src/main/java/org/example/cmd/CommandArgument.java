@@ -12,7 +12,7 @@ enum CommandArgument {
     METHOD_NAME("--methodName="),
     NEW_METHOD_NAME("--newMethodName="),
     NEW_CLASS_NAME("--newClassName="),
-    CLI_INTERACTION_MODE("--CLI");
+    GUI_INTERACTION_MODE("--GUI");
 
     @Getter
     private final String value;
